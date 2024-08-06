@@ -98,7 +98,7 @@ for host in api.post("host.get",{"output":["hostid","host"],"selectTags":"extend
 
         # Remove all maintenance tags
         for tag in currentTags:
-            if(tag["tag"] in  ["maintenance-id","maintenance-start","maintenance-end"]):
+            if(tag["tag"] in  ["maintenance-id","maintenance-start","maintenance-end", "maintenance"]):
                 currentTags.remove(tag)
 
         # Update Tags
