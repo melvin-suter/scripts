@@ -114,7 +114,7 @@ for maintenance in api.post("maintenance.get",{"output": "extend","selectHosts":
             tags = []
             # Remove all maintenance tags
             for tag in host["tags"]:
-                if(tag["tag"] not in  ["maintenance-id","maintenance-start","maintenance-end"]):
+                if(tag["tag"] not in  ["maintenance-id","maintenance-start","maintenance-end", "maintenance"]):
                     tags.append({"tag": tag["tag"], "value": tag["value"]})
 
             # Update Tags
